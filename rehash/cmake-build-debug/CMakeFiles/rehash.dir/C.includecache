@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sean/CLionProjects/rehash/main.c
+rehash.h
+/home/sean/CLionProjects/rehash/rehash.h
+pthread.h
+-
+
+/home/sean/CLionProjects/rehash/rehash.c
+rehash.h
+/home/sean/CLionProjects/rehash/rehash.h
+pthread.h
+-
+sys/time.h
+-
+
+/home/sean/CLionProjects/rehash/rehash.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

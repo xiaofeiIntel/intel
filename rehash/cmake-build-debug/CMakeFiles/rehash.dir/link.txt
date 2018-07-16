@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/rehash.dir/main.c.o CMakeFiles/rehash.dir/rehash.c.o  -o rehash -lpthread 

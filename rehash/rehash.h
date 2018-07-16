@@ -8,12 +8,23 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include<string.h>
-# define DATA_SIZE 10000
+# define DATA_SIZE 1000
 #define LINK_LEN 1000
 #define CHAR_SIZE 10
 #define STRING 1
 #define LIST 2
 #define PATH "/home/sean/CLionProjects/rehash/dump.rdb"
+//#define USEMUTEX
+#define NOCOMP
+
+struct timeval startTime,endTime;
+extern float Timeuse;
+//互斥量声明
+extern pthread_mutex_t mutex;
+extern long count;
+extern long cnt[2];
+/*声明打开文件的变量*/
+FILE* fid;
 
 typedef struct listNode{
     struct listNode *pre;
@@ -65,10 +76,12 @@ void moveFun(struct dictht *ht,int size);
 void moveLinkList(struct dictEntry **table,struct dictEntry* table0);
 void moveString(struct dictEntry **dest,struct dictEntry*src);
 void output(struct dictht* ht,int size,int type);
-void freeHt(struct dictht* ht,int len);
+void freeHt(struct dictht* ht);
 void dumpRdb(const dictEntry* src,const char* path);
 void DataWrite(const char* data,const char* path);
 void DataRead(const char* path);
+void printMultiThread(struct dictht* ht,int type);
+void changeData();
 
 
 #endif //REHASH_REHASH_H
