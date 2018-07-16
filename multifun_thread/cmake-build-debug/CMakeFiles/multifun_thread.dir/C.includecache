@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sean/CLionProjects/multifun_thread/main.c
+stdio.h
+-
+stdlib.h
+-
+pthread.h
+-
+string.h
+-
+subThreadFun.h
+/home/sean/CLionProjects/multifun_thread/subThreadFun.h
+
+/home/sean/CLionProjects/multifun_thread/subThreadFun.c
+sys/time.h
+-
+subThreadFun.h
+/home/sean/CLionProjects/multifun_thread/subThreadFun.h
+stdio.h
+-
+pthread.h
+-
+
+/home/sean/CLionProjects/multifun_thread/subThreadFun.h
+sys/param.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/multifun_thread.dir/main.c.o CMakeFiles/multifun_thread.dir/subThreadFun.c.o  -o multifun_thread -lpthread 
