@@ -16,6 +16,7 @@
 //#define NO_LOCK
 //#define NO_COM
 pthread_mutex_t lock;
+pthread_mutexattr_t mtxAttr;
 struct timeval startTime,endTime;
 float Timeuse;
 double timecount=0;
@@ -55,8 +56,14 @@ int main(int argc ,char* argv[])
 {
     pthread_t tid[NR_THREAD];
     char err_buf[1024];
-    int i, ret;
+    int i, ret,mutexType;
     int num[NR_THREAD];
+
+    pthread_mutexattr_init(&mtxAttr);
+    pthread_mutexattr_settype(&mtxAttr,PTHREAD_MUTEX_ADAPTIVE_NP);
+    ret = pthread_mutex_init(&lock,&mtxAttr);
+    pthread_mutexattr_gettype(&mtxAttr,&mutexType);
+    printf("the mutex type is %d and set target is %d\n",mutexType,PTHREAD_MUTEX_ADAPTIVE_NP);
     ret = pthread_mutex_init(&lock,NULL);
     if(ret)
     {
