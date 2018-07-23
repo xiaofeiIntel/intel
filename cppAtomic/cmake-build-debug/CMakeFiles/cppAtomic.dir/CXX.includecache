@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sean/CLionProjects/cppAtomic/main.cpp
+iostream
+-
+atomic
+-
+sys/time.h
+-
+pthread.h
+-
+
